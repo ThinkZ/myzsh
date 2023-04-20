@@ -1,0 +1,39 @@
+[user]
+	email = thinkz@gmail.com
+	name = ThinkZ
+[core]
+	autocrlf = input
+	safecrlf = warn
+[alias]
+	lga = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format:'%Y/%m/%d %H:%M'
+	lg = !git --no-pager log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format:'%Y/%m/%d %H:%M' --max-count 16 
+	lgz = !git --no-pager log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format:'%Y/%m/%d %H:%M' --max-count 16 --
+	lgx = !git --no-pager log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format:'%Y/%m/%d %H:%M' --max-count 16 --
+	co = checkout
+	st = status
+	c1 = clone --depth=1
+	url = config --get remote.origin.url
+	clone1 = clone --depth=1
+	uhttps = config --global --unset https.proxy
+	uhttp = config --global --unset http.proxy
+	https = config --global https.proxy http://172.16.31.120:1081
+	http = config --global http.proxy http://172.16.31.120:1081
+	ba = branch -a
+	ci = commit
+	br = !git --no-pager branch
+	for-ref = for-each-ref --sort=committerdate --format='%(refname)%09%09%(committerdate:relative)%09%09%(authoremail)' refs
+	unstage = reset HEAD --
+[http]
+	sslVerify = false
+	proxy = http://172.16.31.120:1081
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[https]
+	proxy = http://172.16.31.120:1081
+[credential "http://172.16.31.0:3000"]
+	provider = generic
+[credential]
+	helper = store
