@@ -1,3 +1,10 @@
+# mount tmpfs on TMP
+# mount|grep -E "^[^ ]* on /tmp " >/dev/null
+# if [ "$?" != "0" ];then
+#        echo "Mounting tmp"
+#        mount -t tmpfs tmpfs /tmp -o noexec,defaults,nodev,nosuid,noatime,size=256m
+#fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
