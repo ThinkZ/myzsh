@@ -119,7 +119,9 @@ export LANGUAGE=en_US:en
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias fav_theme='echo $RANDOM_THEME is my Fav! && echo $RANDOM_THEME >> ~/.oh-my-zsh/thinkz.md'
 alias rm_theme='echo $RANDOM_THEME deleted && rm -f  ~/.oh-my-zsh/themes/$RANDOM_THEME.zsh-theme && theme random'
-alias ll=' ls -al'
+alias  l=' ls -al'
+alias ls=' ls'
+alias cd=' cd'
 
 # my history config
 setopt SHARE_HISTORY			# 在所有会话之间共享历史记录。
