@@ -385,9 +385,15 @@ kube_ps1() {
   local KUBE_PS1_RESET_COLOR="${_KUBE_PS1_OPEN_ESC}${_KUBE_PS1_DEFAULT_FG}${_KUBE_PS1_CLOSE_ESC}"
 
   # If background color is set, reset color should also reset the background
+<<<<<<< HEAD
   # if [[ -n "${KUBE_PS1_BG_COLOR}" ]]; then
   #   KUBE_PS1_RESET_COLOR="${_KUBE_PS1_OPEN_ESC}${_KUBE_PS1_DEFAULT_FG}${_KUBE_PS1_DEFAULT_BG}${_KUBE_PS1_CLOSE_ESC}"
   # fi
+=======
+  if [[ -n "${KUBE_PS1_BG_COLOR}" ]]; then
+    KUBE_PS1_RESET_COLOR="${_KUBE_PS1_OPEN_ESC}${_KUBE_PS1_DEFAULT_FG}${_KUBE_PS1_DEFAULT_BG}${_KUBE_PS1_CLOSE_ESC}"
+  fi
+>>>>>>> bd494eb (chore(kube-ps1): update to 0b0e6daf (#13503))
 
   # Background Color
   [[ -n "${KUBE_PS1_BG_COLOR}" ]] && KUBE_PS1+="$(_kube_ps1_color_bg "${KUBE_PS1_BG_COLOR}")"
